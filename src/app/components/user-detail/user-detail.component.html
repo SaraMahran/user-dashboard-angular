@@ -1,0 +1,10 @@
+<mat-card *ngIf="user">
+  <img mat-card-image [src]="user.avatar" alt="{{user.first_name}}">
+  <mat-card-title>{{ user.first_name }} {{ user.last_name }}</mat-card-title>
+  <mat-card-content>
+    <p>ID: {{ user.id }}</p>
+    <p>Email: {{ user.email }}</p>
+  </mat-card-content>
+  <button mat-button (click)="goBack()">Back</button>
+</mat-card>
+<mat-spinner *ngIf="loading"></mat-spinner>
